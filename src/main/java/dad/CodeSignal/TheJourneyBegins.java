@@ -8,4 +8,32 @@ public class TheJourneyBegins {
 	    return resultado;
 
 	}
+	
+	public int centuryFromYear(int year) {
+		    int resultado;
+		    if (year % 100 == 0) {
+		        resultado = (year / 100);
+		    }
+		    else {
+		        resultado = (year / 100) + 1;
+		    } 
+		return resultado;
+	}
+	
+	public boolean checkPalindrome(String inputString) {
+		String cadena = inputString;
+		int posInicio = 0;
+		int posFinal = cadena.length()-1;
+		boolean esPalindrome = true;
+
+		while(posInicio<posFinal && esPalindrome) {
+		    if(cadena.charAt(posInicio) == cadena.charAt(posFinal)){
+		    posInicio++;
+		    posFinal--;
+		    }else {
+		    esPalindrome = false;
+		    }   
+		}
+		return esPalindrome;
+		}
 }
